@@ -14,7 +14,13 @@ const Header = () => {
           <Link href={"#home"}>Gofundme</Link>
           <Link href={"#home"}>Petition</Link>
         </div>
-        <div className="right"></div>
+        <div className="right">
+          <Link
+            href={
+              "https://x.com/elonmusk/status/1896224487491997733?s=46&t=ivWZtwh3-wzJ6E1CN_x_HA"
+            }
+          ></Link>
+        </div>
       </div>
     </header>
   );
