@@ -8,7 +8,7 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "Baby The Deer",
+  title: "Deer Seized by US Government",
   description:
     "Baby, a deer, was wrongfully seized by the Pennsylvania Gaming Commission from his family. This community-driven initiative seeks justice for Baby's return to Pittsburgh.",
 };
