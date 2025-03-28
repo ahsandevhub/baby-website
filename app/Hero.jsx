@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <div className="relative bg-gradient-to-b from-black h-screen">
+    <div className="relative bg-gradient-to-b from-black md:h-screen pt-20 md:pt-0">
       {/* Background image that covers entire viewport */}
       <div
         className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
