@@ -1,4 +1,3 @@
-import BoxingBaby from "@/public/boxing-baby.png";
 import DexScreener from "@/public/dex-screener-logo.png";
 import DexTools from "@/public/dextools-logo.jpeg";
 import X from "@/public/x-icon.png";
@@ -7,12 +6,7 @@ import Link from "next/link";
 
 const Description = () => {
   return (
-    <div
-      className="relative md:pt-20 pt-18"
-      style={{
-        background: "radial-gradient(circle at center, #c4103d, #be123c)",
-      }}
-    >
+    <div className="relative md:pt-20 pt-18">
       <div className="absolute md:w-max w-[90%] md:-top-18 -top-20 z-10 left-1/2 -translate-x-1/2 text-white">
         <h3 className="md:text-2xl text-xl text-center mb-2 font-semibold">
           Contract Address
@@ -78,9 +72,6 @@ const Description = () => {
             />
           </Link>
         </div>
-      </div>
-      <div className="container relative flex flex-col mx-auto h-full max-w-5xl">
-        <Image src={BoxingBaby} alt="boxing baby" className="mt-auto" />
       </div>
     </div>
   );
