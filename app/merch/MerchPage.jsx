@@ -4,7 +4,6 @@ import CryptoCheckout from "@/app/components/CryptoCheckout";
 import MerchItem from "@/app/components/MerchItem";
 import useCart from "@/app/hooks/useCart";
 import { merchItems } from "@/app/lib/products";
-import { ethers } from "ethers";
 import { useState } from "react";
 
 export default function MerchPage() {
@@ -12,15 +11,33 @@ export default function MerchPage() {
   const [walletAddress, setWalletAddress] = useState(null);
   const [showCheckoutModal, setShowCheckoutModal] = useState(false);
 
+  const isMobile = () => {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    );
+  };
+
   const connectWallet = async () => {
+    // Check if MetaMask is installed (desktop)
     if (window.ethereum) {
       try {
-        const provider = new ethers.BrowserProvider(window.ethereum);
-        const signer = await provider.getSigner();
-        setWalletAddress(signer.address);
+        const accounts = await window.ethereum.request({
+          method: "eth_requestAccounts",
+        });
+        setWalletAddress(accounts[0]);
       } catch (error) {
-        console.error("Wallet connection failed:", error);
-        alert(`Wallet connection failed: ${error.message}`);
+        console.error("Desktop wallet connection failed:", error);
+        alert(`Connection failed: ${error.message}`);
+      }
+    }
+    // Mobile-specific connection
+    else if (isMobile()) {
+      try {
+        // Open MetaMask mobile deep link
+        window.location.href = `https://metamask.app.link/dapp/${window.location.host}${window.location.pathname}`;
+      } catch (error) {
+        console.error("Mobile wallet connection failed:", error);
+        alert("Please install MetaMask mobile app to connect");
       }
     } else {
       alert("Please install MetaMask or another Ethereum wallet!");
@@ -69,6 +86,12 @@ export default function MerchPage() {
                   walletAddress.length - 4
                 )}`}
               </div>
+              {/* <button
+                onClick={() => setWalletAddress(null)}
+                className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-4 rounded-full transition-all duration-300"
+              >
+                Disconnect
+              </button> */}
             </div>
           ) : (
             <button

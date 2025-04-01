@@ -37,7 +37,7 @@ const Description = () => {
         <div className="icons flex justify-center md:mt-16 mt-10 items-center md:gap-12 gap-8 mb-4 md:mb-0">
           <Link
             href={
-              "https://x.com/elonmusk/status/1896224487491997733?s=46&t=ivWZtwh3-wzJ6E1CN_x_HA"
+              "https://dexscreener.com/solana/6Fraqd6BFsYvXBa29W8TWbGiKGvCwqvLBfcsBKyitYUH"
             }
             target="_blank"
           >
