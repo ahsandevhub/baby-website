@@ -1,5 +1,5 @@
+import Image from "next/image";
 import Link from "next/link";
-import { FaSoundcloud, FaXTwitter } from "react-icons/fa6";
 
 export default function Footer() {
   return (
@@ -34,33 +34,43 @@ export default function Footer() {
           </div>
 
           {/* Right - Socials */}
-          <div className="flex space-x-6">
-            <a
-              href="https://x.com/babythedeer"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-500 hover:text-blue-700"
-              aria-label="Twitter"
-            >
-              <FaXTwitter className="text-xl" />
-            </a>
-            <a
-              href="https://dexscreener.com/solana/6Fraqd6BFsYvXBa29W8TWbGiKGvCwqvLBfcsBKyitYUH"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-500 hover:text-blue-700 text-sm font-medium flex items-center"
-            >
-              DexScreener
-            </a>
-            <a
-              href="https://m.soundcloud.com/babythedeer"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-500 hover:text-blue-700"
-              aria-label="SoundCloud"
-            >
-              <FaSoundcloud className="text-xl" />
-            </a>
+          <div className="flex justify-center space-x-4">
+            {[
+              {
+                name: "Twitter",
+                href: "https://x.com/babythedeer",
+                icon: "/x-icon.png",
+              },
+              {
+                name: "DexTools",
+                href: "https://www.dextools.io/app/en/token/baby",
+                icon: "/dextools-logo.jpeg",
+              },
+              {
+                name: "GeckoTerminal",
+                href: "https://www.geckoterminal.com/solana/pools/6Fraqd6BFsYvXBa29W8TWbGiKGvCwqvLBfcsBKyitYUH",
+                icon: "/geckoterminal.png",
+              },
+            ].map((social) => (
+              <a
+                key={social.name}
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative group"
+                aria-label={social.name}
+              >
+                <div className="size-10 rounded-lg bg-white border border-blue-100 shadow-sm overflow-hidden transition-all group-hover:scale-110 group-hover:shadow-md">
+                  <Image
+                    src={social.icon}
+                    alt={social.name}
+                    width={50}
+                    height={50}
+                    className="object-contain"
+                  />
+                </div>
+              </a>
+            ))}
           </div>
         </div>
 

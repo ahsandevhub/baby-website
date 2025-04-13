@@ -1,87 +1,90 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 
 export default function Header() {
   return (
-    <header className="bg-white py-4 border-b border-blue-50">
+    <header className="bg-white/80 backdrop-blur-sm py-4 border-b border-blue-100 sticky top-0 z-50">
       <div className="container mx-auto max-w-6xl px-4 flex justify-between items-center">
+        {/* Logo with improved typography */}
         <Link href="/" className="flex items-center space-x-2 group">
           <Image
             src="/logo.jpg"
             alt="Logo"
-            className="size-10 rounded-full border-2 border-blue-100 group-hover:border-blue-300 transition-all"
-            width={40}
-            height={40}
+            className="size-10 shadow-sm sm:size-12 rounded-lg group-hover:border-blue-300 transition-all"
+            width={50}
+            height={50}
           />
-          <span className="text-xl font-semibold text-blue-900 group-hover:text-blue-600 transition-colors">
-            Baby The Deer
-          </span>
+          <div className="flex flex-col gap-1">
+            <span className="leading-none sm:text-2xl text-xl font-bold text-gray-900 transition-colors">
+              BABY
+            </span>
+            <span className="leading-none text-gray-700 transition-colors">
+              The Deer
+            </span>
+          </div>
         </Link>
 
+        {/* Navigation with improved styling */}
         <nav className="hidden md:block">
-          <ul className="flex space-x-8">
-            <li>
-              <Link
-                href="/about"
-                className="text-blue-800 hover:text-blue-500 font-medium transition-colors relative
-                  after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-blue-500 
-                  hover:after:w-full after:transition-all"
-              >
-                About
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/contact"
-                className="text-blue-800 hover:text-blue-500 font-medium transition-colors relative
-                  after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-blue-500 
-                  hover:after:w-full after:transition-all"
-              >
-                Contact
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/blog"
-                className="text-blue-800 hover:text-blue-500 font-medium transition-colors relative
-                  after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-blue-500 
-                  hover:after:w-full after:transition-all"
-              >
-                Blog
-              </Link>
-            </li>
+          <ul className="flex space-x-10">
+            {[
+              { name: "About", href: "/about" },
+              { name: "Story", href: "/story" },
+              { name: "Gallery", href: "/gallery" },
+              { name: "Contact", href: "/contact" },
+            ].map((item) => (
+              <li key={item.name}>
+                <Link
+                  href={item.href}
+                  className="relative text-blue-800/90 hover:text-blue-600 font-medium transition-colors
+                    after:content-[''] after:absolute after:-bottom-1 after:left-1/2 after:w-0 after:h-[3px] after:bg-blue-400 
+                    hover:after:w-[100%] hover:after:left-0 after:transition-all duration-300"
+                >
+                  {item.name}
+                </Link>
+              </li>
+            ))}
           </ul>
         </nav>
 
-        <div className="flex space-x-5">
-          <a
-            href="https://twitter.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-400 hover:text-blue-600 transition-colors"
-            aria-label="Twitter"
-          >
-            <FaXTwitter className="text-xl" />
-          </a>
-          <a
-            href="https://linkedin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-400 hover:text-blue-600 transition-colors"
-            aria-label="LinkedIn"
-          >
-            <FaLinkedin className="text-xl" />
-          </a>
-          <a
-            href="https://github.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-400 hover:text-blue-600 transition-colors"
-            aria-label="GitHub"
-          >
-            <FaGithub className="text-xl" />
-          </a>
+        {/* Social icons with better spacing and hover effects */}
+        <div className="flex space-x-4">
+          {[
+            {
+              name: "Twitter",
+              href: "https://x.com/babythedeer",
+              icon: "/x-icon.png",
+            },
+            {
+              name: "DexTools",
+              href: "https://www.dextools.io/app/en/token/baby",
+              icon: "/dextools-logo.jpeg",
+            },
+            {
+              name: "GeckoTerminal",
+              href: "https://www.geckoterminal.com/solana/pools/6Fraqd6BFsYvXBa29W8TWbGiKGvCwqvLBfcsBKyitYUH",
+              icon: "/geckoterminal.png",
+            },
+          ].map((social) => (
+            <a
+              key={social.name}
+              href={social.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative group"
+              aria-label={social.name}
+            >
+              <div className="size-10 rounded-lg bg-white border border-blue-100 shadow-sm overflow-hidden transition-all group-hover:scale-110 group-hover:shadow-md">
+                <Image
+                  src={social.icon}
+                  alt={social.name}
+                  width={40}
+                  height={40}
+                  className="object-contain"
+                />
+              </div>
+            </a>
+          ))}
         </div>
       </div>
     </header>
