@@ -1,8 +1,10 @@
 import Head from "next/head";
 import Details from "./components/Details";
 import Footer from "./components/Footer";
+import Gallery from "./components/Gallery";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import Playlist from "./components/Playlist";
 
 export default function Homepage() {
   return (
@@ -20,6 +22,8 @@ export default function Homepage() {
       <main className="flex-grow">
         <Hero />
         <Details />
+        <Playlist />
+        <Gallery />
       </main>
 
       <Footer />
