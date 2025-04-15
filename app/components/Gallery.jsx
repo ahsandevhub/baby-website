@@ -32,13 +32,13 @@ const Gallery = () => {
   };
 
   return (
-    <div className="py-10 bg-white">
+    <div className="py-10 md:py-20 bg-white">
       <div className="container max-w-6xl mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-8 text-center">
           Baby's Photo Gallery
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
           {images.map((image, index) => (
             <div
               key={image.id}

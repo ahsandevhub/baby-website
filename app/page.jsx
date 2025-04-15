@@ -5,6 +5,8 @@ import Gallery from "./components/Gallery";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Playlist from "./components/Playlist";
+import SocialInteractions from "./components/SocialInteractions";
+import WalletTracker from "./components/WalletTracker";
 
 export default function Homepage() {
   return (
@@ -22,7 +24,9 @@ export default function Homepage() {
       <main className="flex-grow">
         <Hero />
         <Details />
+        <SocialInteractions />
         <Playlist />
+        <WalletTracker />
         <Gallery />
       </main>
 

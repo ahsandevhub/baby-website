@@ -46,7 +46,7 @@ export default function Details() {
   }, [images]);
 
   return (
-    <section className="py-10 sm:py-16 bg-white">
+    <section className="py-8 mb-10 bg-white">
       {/* Infinite Scroll Container - Full Width */}
       <div className="w-full overflow-hidden mb-8">
         <div ref={scrollContainerRef} className="flex w-max">
@@ -72,31 +72,73 @@ export default function Details() {
       {/* Story Content - Bottom - Max Width 6xl */}
       <div className="container max-w-6xl mx-auto px-4">
         <div className="w-full">
-          <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-6 text-center">
-            Baby's Heartbreaking Story
+          <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4 text-center">
+            Baby's Story
           </h2>
-          <div className="prose prose-lg text-center text-blue-800 space-y-4">
+          <h3 className="text-xl font-semibold text-gray-800 mb-2 text-center">
+            #JUSTICEFORBABY: Nationwide Outcry After Beloved Pet Deer Seized
+          </h3>
+          <div className="prose prose-lg text-justify text-gray-800 space-y-4">
             <p>
-              For nearly two years, Baby the deer was a beloved member of a
-              Pennsylvania community. He wasn't just a wild animal - he was
-              family.
+              <span className="font-semibold">PENNSYLVANIA</span> - For nearly
+              two years, "Baby" the deer became an integral part of a
+              Pennsylvania community, his gentle presence bringing joy to
+              residents of all ages. However, this heartwarming story has taken
+              a tragic turn, igniting a nationwide call for justice.
             </p>
             <p>
-              Baby spent his days peering through windows, lounging on porches,
-              and playing in the water. The entire neighborhood adored him, from
-              children to mail carriers.
+              More than just a wild animal, Baby was family to many. Neighbors
+              would often see him peering through windows, relaxing on porches,
+              and playfully enjoying water. His affectionate greetings were even
+              a highlight of the local mail carrier's daily route.
+            </p>
+            <h4 className="text-lg font-semibold text-gray-900 mb-1">
+              February 25th: The Day the Community's Heart Broke
+            </h4>
+            <p>
+              The peace of the community was shattered on February 25th when the
+              Pennsylvania Game Commission (PGC) took drastic action. In a move
+              described by witnesses as "unlawful and brutal," authorities
+              seized Baby and arrested his owner, Tammy, on charges of illegal
+              possession of wildlife. These charges were later dismissed, adding
+              to the community's outrage.
+            </p>
+            <h4 className="text-lg font-semibold text-gray-900 mb-1">
+              Proof Emerges: Baby Was Legally Owned, Not Wild
+            </h4>
+            <p>
+              In a significant development, Baby's legal co-owner, Candi, has
+              come forward with irrefutable proof that Baby was not born in the
+              wild. This evidence confirms that Tammy and Candi were the
+              rightful legal owners of the beloved deer, directly contradicting
+              the PGC's initial justification for the seizure.
+            </p>
+            <h4 className="text-lg font-semibold text-gray-900 mb-1">
+              Devastating Update: Fears Mount for Baby's Fate
+            </h4>
+            <p className="font-semibold text-gray-900">
+              The latest information from experts paints a grim picture. Despite
+              the evidence of legal ownership, professionals now believe it is
+              unlikely that Baby the Deer is still alive. The very system tasked
+              with protecting wildlife is now feared to be responsible for his
+              demise.
             </p>
             <p>
-              On February 25th, the Pennsylvania Game Commission brutally seized
-              Baby and arrested his owner Tammy on false charges (later
-              dismissed). The community was devastated.
+              This devastating news has amplified the community's grief and
+              fueled a growing nationwide demand for answers and accountability
+              from the Pennsylvania Game Commission and all involved parties.
             </p>
-            <p className="font-semibold text-blue-900 text-center">
-              Experts now believe Baby is likely dead - taken by the very system
-              meant to protect wildlife.
+            <h4 className="text-lg font-semibold text-gray-900 mb-1">
+              A Call for Justice: #JUSTICEFORBABY Movement Gains Momentum
+            </h4>
+            <p>
+              The hashtag #JUSTICEFORBABY is gaining traction across the country
+              as animal lovers and concerned citizens rally in support of Baby
+              and his owners. The community remains resolute in their fight for
+              truth and justice.
             </p>
             <p className="text-center">
-              We demand answers and accountability from the PA Game Commission.
+              The fight for truth and justice for Baby continues.
             </p>
           </div>
           <div className="text-center mt-8">
