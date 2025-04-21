@@ -42,14 +42,14 @@ export default function Footer() {
                 icon: "/x-icon.png",
               },
               {
-                name: "DexTools",
-                href: "https://www.dextools.io/app/en/token/baby",
-                icon: "/dextools-logo.jpeg",
+                name: "TeleGram",
+                href: "https://t.me/BabythedeerCTO",
+                icon: "/telegram.webp",
               },
               {
-                name: "GeckoTerminal",
-                href: "https://www.geckoterminal.com/solana/pools/6Fraqd6BFsYvXBa29W8TWbGiKGvCwqvLBfcsBKyitYUH",
-                icon: "/geckoterminal.png",
+                name: "BabyTheDeer",
+                href: "https://www.babythedeer.org",
+                icon: "/baby-icon.png",
               },
             ].map((social) => (
               <a

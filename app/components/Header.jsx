@@ -56,14 +56,14 @@ export default function Header() {
               icon: "/x-icon.png",
             },
             {
-              name: "DexTools",
-              href: "https://www.dextools.io/app/en/token/baby",
-              icon: "/dextools-logo.jpeg",
+              name: "TeleGram",
+              href: "https://t.me/BabythedeerCTO",
+              icon: "/telegram.webp",
             },
             {
-              name: "DexScreener",
-              href: "https://dexscreener.com/solana/6fraqd6bfsyvxba29w8twbgikgvcwqvlbfcsbkyityuh",
-              icon: "/dexscreener.png",
+              name: "BabyTheDeer",
+              href: "https://www.babythedeer.org",
+              icon: "/baby-icon.png",
             },
           ].map((social) => (
             <a
