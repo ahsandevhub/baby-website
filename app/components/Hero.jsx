@@ -90,9 +90,19 @@ export default function Hero() {
                 icon: "/dextools-logo.jpeg",
               },
               {
+                name: "DexScreener",
+                href: "https://dexscreener.com/solana/6fraqd6bfsyvxba29w8twbgikgvcwqvlbfcsbkyityuh",
+                icon: "/dexscreener.png",
+              },
+              {
                 name: "GeckoTerminal",
                 href: "https://www.geckoterminal.com/solana/pools/6Fraqd6BFsYvXBa29W8TWbGiKGvCwqvLBfcsBKyitYUH",
                 icon: "/geckoterminal.png",
+              },
+              {
+                name: "CoinMarketCap",
+                href: "https://coinmarketcap.com/currencies/deer-seized-by-us-government/",
+                icon: "/coinmarketcap.png",
               },
             ].map((social) => (
               <a

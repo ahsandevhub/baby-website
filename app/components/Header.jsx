@@ -61,9 +61,9 @@ export default function Header() {
               icon: "/dextools-logo.jpeg",
             },
             {
-              name: "GeckoTerminal",
-              href: "https://www.geckoterminal.com/solana/pools/6Fraqd6BFsYvXBa29W8TWbGiKGvCwqvLBfcsBKyitYUH",
-              icon: "/geckoterminal.png",
+              name: "DexScreener",
+              href: "https://dexscreener.com/solana/6fraqd6bfsyvxba29w8twbgikgvcwqvlbfcsbkyityuh",
+              icon: "/dexscreener.png",
             },
           ].map((social) => (
             <a
