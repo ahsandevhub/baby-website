@@ -28,10 +28,11 @@ export default function Header() {
         <nav className="hidden md:block">
           <ul className="flex space-x-10">
             {[
-              { name: "About", href: "/about" },
-              { name: "Story", href: "/story" },
-              { name: "Gallery", href: "/gallery" },
-              { name: "Contact", href: "/contact" },
+              { name: "Home", href: "/" },
+              { name: "Story", href: "#story" },
+              { name: "Media", href: "#media" },
+              { name: "Playlist", href: "#playlist" },
+              { name: "Gallery", href: "#gallery" },
             ].map((item) => (
               <li key={item.name}>
                 <Link

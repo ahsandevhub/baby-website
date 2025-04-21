@@ -46,7 +46,7 @@ export default function Details() {
   }, [images]);
 
   return (
-    <section className="py-8 mb-10 bg-white">
+    <section id="story" className="py-8 mb-10 bg-white">
       {/* Infinite Scroll Container - Full Width */}
       <div className="w-full overflow-hidden mb-8">
         <div ref={scrollContainerRef} className="flex w-max">

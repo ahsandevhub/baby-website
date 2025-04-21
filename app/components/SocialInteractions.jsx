@@ -60,6 +60,14 @@ const SocialInteractions = () => {
       url: "https://twitter.com/mtgreenee/status/1896674837835431967",
       handle: "@mtgreenee",
     },
+    {
+      url: "https://twitter.com/JondavidRLongo/status/1897737071499841894",
+      handle: "@JondavidRLongo",
+    },
+    {
+      url: "https://twitter.com/davidmaloneypa/status/1909028048533443069",
+      handle: "@davidmaloneypa",
+    },
   ];
 
   // YouTube videos
@@ -95,7 +103,7 @@ const SocialInteractions = () => {
   }, []);
 
   return (
-    <section className="bg-gray-50">
+    <section id="media" className="bg-gray-50">
       <div className="max-w-6xl mx-auto px-4 py-12">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-blue-900">
           The Movement for Baby

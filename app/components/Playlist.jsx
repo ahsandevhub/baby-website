@@ -4,7 +4,7 @@ import { FaSoundcloud } from "react-icons/fa";
 
 const Playlist = () => {
   return (
-    <div className="max-w-6xl mx-auto px-4 py-8 md:py-20">
+    <div id="playlist" className="max-w-6xl mx-auto px-4 py-8 md:py-20">
       <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-6 text-center">
         Baby The Deer Playlist
       </h2>

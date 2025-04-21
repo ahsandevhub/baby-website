@@ -13,19 +13,22 @@ export default function Footer() {
             </h3>
             <div className="flex space-x-4">
               <Link
-                href="/story"
+                target="_blank"
+                href="https://www.babythedeer.org/baby"
                 className="text-blue-600 hover:text-blue-800 text-sm"
               >
                 Baby's Story
               </Link>
               <Link
+                target="_blank"
                 href="https://babythedeer.org"
                 className="text-blue-600 hover:text-blue-800 text-sm"
               >
                 Official Site
               </Link>
               <Link
-                href="/contact"
+                target="_blank"
+                href="https://t.me/BabythedeerCTO"
                 className="text-blue-600 hover:text-blue-800 text-sm"
               >
                 Contact
