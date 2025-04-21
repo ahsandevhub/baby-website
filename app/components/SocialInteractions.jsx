@@ -61,12 +61,12 @@ const SocialInteractions = () => {
       handle: "@mtgreenee",
     },
     {
-      url: "https://twitter.com/JondavidRLongo/status/1897737071499841894",
-      handle: "@JondavidRLongo",
+      url: "https://twitter.com/davidmaloneypa/status/1907752846117798351?s=46&t=d8b8rq8SqTvhA3NSEZytJw",
+      handle: "@davidmaloneypa",
     },
     {
-      url: "https://twitter.com/davidmaloneypa/status/1909028048533443069",
-      handle: "@davidmaloneypa",
+      url: "https://twitter.com/JondavidRLongo/status/1897737071499841894",
+      handle: "@JondavidRLongo",
     },
   ];
 
