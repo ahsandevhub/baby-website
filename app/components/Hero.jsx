@@ -17,7 +17,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative bg-blue-50">
+    <section className="relative bg-blue-50 min-h-[calc(100vh-81px)]">
       <div className="container max-w-6xl mx-auto px-4 py-8 flex flex-col items-center">
         {/* Banner Image - Full Width */}
         <div className="w-full mb-8 rounded-lg overflow-hidden shadow-md">
